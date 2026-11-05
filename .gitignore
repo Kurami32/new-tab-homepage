@@ -1,0 +1,4 @@
+*.zip
+.amo-upload-uuid
+node_modules
+web-ext-artifacts
