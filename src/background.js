@@ -1,6 +1,6 @@
 const newTabPage = browser.runtime.getURL("new-tab.html")
 
-// Allow embedding, but only for frames loaded by our new tab page
+// Allow embedding, but only for frames loaded by our page
 browser.webRequest.onHeadersReceived.addListener(
   details => {
     const parents = [
@@ -25,12 +25,6 @@ browser.webRequest.onHeadersReceived.addListener(
       }
       responseHeaders.push(header)
     }
-    console.log(
-      details.url,
-      details.statusCode,
-      "in:", details.responseHeaders.map(h => `${h.name}: ${h.value}`),
-      "out:", responseHeaders.map(h => h.name),
-    )
     return { responseHeaders }
   },
   { urls: ["http://*/*", "https://*/*"], types: ["sub_frame"] },
