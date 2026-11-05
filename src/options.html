@@ -3,30 +3,36 @@
   <head>
     <meta charset="utf-8" />
     <meta name="color-scheme" content="light dark" />
-    <title>New Tab</title>
+    <title data-i18n="newTab">New Tab</title>
     <link rel="stylesheet" href="options.css" />
   </head>
   <body>
     <main>
       <section>
         <div class="row">
-          <label for="homepageSource">New Tab</label>
+          <label for="homepageSource" data-i18n="newTab">New Tab</label>
           <select id="homepageSource">
-            <option value="firefox">Firefox homepage</option>
-            <option value="custom">Custom URL</option>
+            <option value="firefox" data-i18n="firefoxHomepage">
+              Firefox homepage
+            </option>
+            <option value="custom" data-i18n="customUrl">Custom URL</option>
           </select>
         </div>
         <div class="row" id="customUrlRow">
-          <label for="customUrl">Custom URL</label>
+          <label for="customUrl" data-i18n="customUrl">Custom URL</label>
           <input type="text" id="customUrl" placeholder="https://example.com" />
         </div>
         <label class="row toggle">
-          <span>Use a different URL in private windows</span>
+          <span data-i18n="privateUrlToggle"
+            >Use a different URL in private windows</span
+          >
           <input type="checkbox" id="privateUrlEnabled" role="switch" />
           <span class="track"></span>
         </label>
         <div class="row" id="privateUrlRow">
-          <label for="privateUrl">Private window URL</label>
+          <label for="privateUrl" data-i18n="privateWindowUrl"
+            >Private window URL</label
+          >
           <input
             type="text"
             id="privateUrl"
@@ -34,34 +40,52 @@
           />
         </div>
         <label class="row toggle">
-          <span>Focus the page instead of the address bar</span>
+          <span data-i18n="focusPage"
+            >Focus the page instead of the address bar</span
+          >
           <input type="checkbox" id="focusPage" role="switch" />
           <span class="track"></span>
         </label>
       </section>
-      <h2>Loading</h2>
+      <h2 data-i18n="loading">Loading</h2>
       <section>
         <div class="row">
-          <label for="spinnerColor">Spinner color</label>
+          <label for="spinnerColor" data-i18n="spinnerColor"
+            >Spinner color</label
+          >
           <input type="color" id="spinnerColor" />
         </div>
         <div class="row">
-          <label for="backgroundType">Background</label>
+          <label for="backgroundType" data-i18n="background">Background</label>
           <select id="backgroundType">
-            <option value="default">Default</option>
-            <option value="color">Custom color</option>
-            <option value="image">Image</option>
+            <option value="default" data-i18n="backgroundDefault">
+              Default
+            </option>
+            <option value="color" data-i18n="backgroundCustomColor">
+              Custom color
+            </option>
+            <option value="image" data-i18n="backgroundImageOption">
+              Image
+            </option>
           </select>
         </div>
         <div class="row" id="backgroundColorRow">
-          <label for="backgroundColor">Background color</label>
+          <label for="backgroundColor" data-i18n="backgroundColor"
+            >Background color</label
+          >
           <input type="color" id="backgroundColor" />
         </div>
         <div class="row" id="backgroundImageRow">
-          <label for="backgroundImage">Background image</label>
+          <label for="backgroundImage" data-i18n="backgroundImage"
+            >Background image</label
+          >
           <div class="file">
             <input type="file" id="backgroundImage" accept="image/*" />
-            <button type="button" id="clearBackgroundImage">Clear</button>
+            <button
+              type="button"
+              id="clearBackgroundImage"
+              data-i18n="clear"
+            ></button>
             <span id="imageStatus"></span>
           </div>
         </div>

@@ -1,6 +1,8 @@
 {
   "name": "new-tab-homepage",
-  "version": "1.0.2",
+  "version": "1.0.3",
+  "repository": "https://github.com/Kurami32/new-tab-homepage",
+  "author": "Kurami32",
   "private": true,
   "license": "MIT",
   "scripts": {

@@ -1,5 +1,6 @@
 import defaults from "./defaults.js"
 
+document.title = browser.i18n.getMessage("newTab")
 const spinner = document.querySelector(".spinner")
 const thisTab = await browser.tabs.getCurrent()
 const {

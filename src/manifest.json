@@ -1,8 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "New Tab Homepage",
+  "name": "__MSG_extName__",
   "version": "1.0.3",
-  "description": "Use you Homepage URL for new tabs",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "author": "Kurami32",
+  "homepage_url": "https://github.com/Kurami32/new-tab-homepage",
   "permissions": ["browserSettings", "storage"],
   "chrome_url_overrides": {
     "newtab": "new-tab.html"

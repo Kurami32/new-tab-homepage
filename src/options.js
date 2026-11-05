@@ -1,5 +1,10 @@
 import defaults from "./defaults.js"
 
+const t = key => browser.i18n.getMessage(key)
+for (const el of document.querySelectorAll("[data-i18n]")) {
+  el.textContent = t(el.dataset.i18n)
+}
+
 const checkbox = document.getElementById("focusPage")
 const color = document.getElementById("spinnerColor")
 const backgroundType = document.getElementById("backgroundType")
@@ -21,7 +26,7 @@ checkbox.checked = stored.focusPage
 color.value = stored.spinnerColor
 backgroundType.value = stored.backgroundType
 backgroundColor.value = stored.backgroundColor
-imageStatus.textContent = stored.backgroundImage ? "Image set" : "No image"
+imageStatus.textContent = stored.backgroundImage ? t("imageSet") : t("noImage")
 homepageSource.value = stored.homepageSource
 customUrl.value = stored.customUrl
 privateUrlEnabled.checked = stored.privateUrlEnabled
@@ -54,14 +59,14 @@ backgroundImage.addEventListener("change", () => {
   const reader = new FileReader()
   reader.onload = () =>
     browser.storage.local.set({ backgroundImage: reader.result }).then(
-      () => (imageStatus.textContent = "Image set"),
-      () => (imageStatus.textContent = "Image too large"),
+      () => (imageStatus.textContent = t("imageSet")),
+      () => (imageStatus.textContent = t("imageTooLarge")),
     )
   reader.readAsDataURL(file)
 })
 clearBackgroundImage.addEventListener("click", () => {
   backgroundImage.value = ""
-  imageStatus.textContent = "No image"
+  imageStatus.textContent = t("noImage")
   browser.storage.local.set({ backgroundImage: "" })
 })
 homepageSource.addEventListener("change", () => {

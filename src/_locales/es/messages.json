@@ -1,0 +1,62 @@
+{
+  "extName": {
+    "message": "Página de inicio en nueva pestaña"
+  },
+  "extDescription": {
+    "message": "Usa la URL de tu página de inicio en las pestañas nuevas"
+  },
+  "newTab": {
+    "message": "Nueva pestaña"
+  },
+  "firefoxHomepage": {
+    "message": "Página de inicio de Firefox"
+  },
+  "customUrl": {
+    "message": "URL personalizada"
+  },
+  "privateUrlToggle": {
+    "message": "Usar otra URL en ventanas privadas"
+  },
+  "privateWindowUrl": {
+    "message": "URL de ventana privada"
+  },
+  "focusPage": {
+    "message": "Enfocar la página en lugar de la barra de direcciones"
+  },
+  "loading": {
+    "message": "Indicador de carga"
+  },
+  "spinnerColor": {
+    "message": "Color del indicador"
+  },
+  "background": {
+    "message": "Fondo"
+  },
+  "backgroundDefault": {
+    "message": "Predeterminado"
+  },
+  "backgroundCustomColor": {
+    "message": "Color personalizado"
+  },
+  "backgroundImageOption": {
+    "message": "Imagen"
+  },
+  "backgroundColor": {
+    "message": "Color de fondo"
+  },
+  "backgroundImage": {
+    "message": "Imagen de fondo"
+  },
+  "clear": {
+    "message": "Borrar"
+  },
+  "imageSet": {
+    "message": "Ya elegiste una imagen"
+  },
+  "noImage": {
+    "message": "Sin imagen"
+  },
+  "imageTooLarge": {
+    "message": "Imagen muy grande"
+  }
+}

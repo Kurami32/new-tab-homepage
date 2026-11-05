@@ -1,0 +1,62 @@
+{
+  "extName": {
+    "message": "New Tab Homepage"
+  },
+  "extDescription": {
+    "message": "Use your Homepage URL for new tabs"
+  },
+  "newTab": {
+    "message": "New Tab"
+  },
+  "firefoxHomepage": {
+    "message": "Firefox homepage"
+  },
+  "customUrl": {
+    "message": "Custom URL"
+  },
+  "privateUrlToggle": {
+    "message": "Use a different URL in private windows"
+  },
+  "privateWindowUrl": {
+    "message": "Private window URL"
+  },
+  "focusPage": {
+    "message": "Focus the page instead of the address bar"
+  },
+  "loading": {
+    "message": "Loading"
+  },
+  "spinnerColor": {
+    "message": "Spinner color"
+  },
+  "background": {
+    "message": "Background"
+  },
+  "backgroundDefault": {
+    "message": "Default"
+  },
+  "backgroundCustomColor": {
+    "message": "Custom color"
+  },
+  "backgroundImageOption": {
+    "message": "Image"
+  },
+  "backgroundColor": {
+    "message": "Background color"
+  },
+  "backgroundImage": {
+    "message": "Background image"
+  },
+  "clear": {
+    "message": "Clear"
+  },
+  "imageSet": {
+    "message": "Image set"
+  },
+  "noImage": {
+    "message": "No image"
+  },
+  "imageTooLarge": {
+    "message": "Image too large"
+  }
+}
