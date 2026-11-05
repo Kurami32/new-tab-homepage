@@ -1,4 +1,3 @@
-const frame = document.querySelector("iframe")
 const thisTab = await browser.tabs.getCurrent()
 const { focusPage } = await browser.storage.local.get({ focusPage: false })
 
@@ -15,21 +14,9 @@ if (/^https?:\/\//i.test(savedHomepage)) {
 }
 const newTabUrl = new URL(startUrl).href
 
-browser.webNavigation.onBeforeNavigate.addListener(
-  nav => {
-    if (
-      nav.tabId === newTabUrl.id &&
-      nav.frameId !== 0 &&
-      nav.parentFrameId === 0 &&
-      nav.url !== startHref
-    ) {
-      window.location.href = nav.url
-    }
-  },
-  { url: [{ schemes: ["http", "https"] }] },
-)
-
 if (focusPage) {
-  frame.addEventListener("load", () => frame.contentWindow.focus())
+  await browser.tabs.create({ url: newTabUrl, index: thisTab.index })
+  await browser.tabs.remove(thisTab.id)
+} else {
+  window.location.replace(newTabUrl)
 }
-frame.src = startUrl
