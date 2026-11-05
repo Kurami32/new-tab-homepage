@@ -31,9 +31,7 @@ if (!savedHomepage && homepageSource === "custom") {
   savedHomepage = customUrl.trim()
 }
 if (!savedHomepage) {
-  savedHomepage = (
-    await browser.browserSettings.homepageOverride.get({})
-  ).value
+  savedHomepage = (await browser.browserSettings.homepageOverride.get({})).value
     .split("|")[0]
     .trim()
 }
@@ -42,8 +40,11 @@ let newTabUrl = "about:blank"
 try {
   if (/^https?:\/\//i.test(savedHomepage)) {
     newTabUrl = new URL(savedHomepage).href
-  } else if (savedHomepage && !/^[a-z][a-z\d+.-]*:(?!\d)/i.test(savedHomepage)) {
-    newTabUrl = new URL("https://" + savedHomepage).href
+  } else if (
+    savedHomepage &&
+    !/^[a-z][a-z\d+.-]*:(?!\d)/i.test(savedHomepage)
+  ) {
+    newTabUrl = new URL(`https://${savedHomepage}`).href
   }
 } catch {}
 

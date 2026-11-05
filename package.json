@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "web-ext run",
-    "lint": "web-ext lint",
+    "lint": "web-ext lint && biome check",
+    "lint:fix": "biome check --write",
     "build": "web-ext build --overwrite-dest",
     "sign": "web-ext sign --channel=unlisted"
   },
@@ -13,6 +14,7 @@
     "sourceDir": "src"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.6.5",
     "web-ext": "^10.8.0"
   }
 }

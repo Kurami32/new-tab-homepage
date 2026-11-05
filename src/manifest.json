@@ -3,10 +3,7 @@
   "name": "New Tab Homepage",
   "version": "1.0.3",
   "description": "Use you Homepage URL for new tabs",
-  "permissions": [
-    "browserSettings",
-    "storage"
-  ],
+  "permissions": ["browserSettings", "storage"],
   "chrome_url_overrides": {
     "newtab": "new-tab.html"
   },
@@ -18,9 +15,7 @@
       "id": "{56821874-fd5f-4584-9bdd-ee0072c3af24}",
       "strict_min_version": "140.0",
       "data_collection_permissions": {
-        "required": [
-          "none"
-        ]
+        "required": ["none"]
       }
     },
     "gecko_android": {
