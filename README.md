@@ -14,6 +14,11 @@ This extension has a few things:
 - An option to auto-focus your page.
 - Available in English and Spanish
 
+The options looks like this:
+
+<img height="375" alt="screenshot_2026-11-05_19-04-20" src="https://github.com/user-attachments/assets/513ea1cf-1752-4e38-9074-5f9a264bd4c2" />
+
+
 To install it you can go to [Releases](https://github.com/Kurami32/new-tab-homepage/releases) and download the `.xpi` file
 and load it manually in `about:addons`. For now the extension isn't published in the Firefox store.
 
